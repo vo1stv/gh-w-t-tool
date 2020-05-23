@@ -1,0 +1,21 @@
+# Load an environment with PanDoc preinstalled
+
+name: Pandoc
+
+on:
+  push:
+      branches:
+        - actions  
+      paths:
+        - '.github/workflows/**'
+    schedule:
+        # * is a special character in YAML so you have to quote this string
+        - cron:  '0 0 * * *'
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: docker://pandoc/core:2.9
+        with:
+          args: "--help" # gets appended to pandoc command
