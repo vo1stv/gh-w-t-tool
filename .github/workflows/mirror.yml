@@ -1,6 +1,6 @@
 # Maintain a mirror between the master branch and the mirrored gist
 
-name: mirror.yml
+name: Mirror
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
