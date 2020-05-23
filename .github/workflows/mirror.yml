@@ -45,7 +45,7 @@ jobs:
         # [Learn more about creating and using encrypted secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)
         #
         # Default: ${{ github.token }}
-        token: ${{ secrets.GHPAGES_DEPLOY }}
+        token: ${{ github.token }}
 
     # Check if mirror has changes and update the master branch if so
     - name: Mirror Mirror
