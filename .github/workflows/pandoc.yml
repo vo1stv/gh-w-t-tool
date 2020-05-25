@@ -16,14 +16,7 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-18.04
     steps:
-      # https://github.community/t5/GitHub-Actions/Use-docker-images-from-GitHub-Package-Registry/td-p/30407
-      - name: Docker login
-        run: docker login docker.pkg.github.com -u $GITHUB_ACTOR -p $GITHUB_TOKEN
-        env:
-             GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}    
-
-      - name: Pull Docker image
-        run: docker pull "hub.docker.com/pandoc/latex:2.9"
-
-      - name: test
-        run: pandoc --help
+      # TODO: investigate options for running as a local action instead of 3rd party
+      - uses: docker://pandoc/core:2.9
+        with:
+          args: "--help" # gets appended to pandoc command
