@@ -23,7 +23,7 @@ jobs:
              GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}    
 
       - name: Pull Docker image
-        run: docker pull "docker.pkg.github.com/pandoc/latex:2.9"
+        run: docker pull "docker.pkg.github.com/v2/pandoc/latex/latex:2.9"
 
       - name: Run image
         run: docker run -it -d --name pandocker -v $GITHUB_WORKSPACE:/workspace -w /workspace docker.pkg.github.com/$GITHUB_REPOSITORY/firmware-builder:latest
