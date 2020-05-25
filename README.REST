@@ -5,6 +5,10 @@ gh-w-t-tool supports Literate Programming by trying to work with ANY markup lang
 
 The actions branch is reserved for use by GitHub Actions. The master branch or its mirror at GitHub Gists should be used for code management.  The gh-pages branch is reserved for hosting the site's html and web API.
 
-*    `Pandoc <https://github.com/vo1stv/gh-w-t-tool/workflows/Pandoc/badge.svg?branch=actions&event=schedule>`__
+*    |Pandoc|
 
-*    `Mirror <https://github.com/vo1stv/gh-w-t-tool/workflows/Mirror/badge.svg?branch=actions&event=schedule>`__
+*    |Mirror|
+
+.. |Pandoc| image:: https://github.com/vo1stv/gh-w-t-tool/workflows/Pandoc/badge.svg?branch=actions&event=schedule
+
+.. |Mirror| image:: https://github.com/vo1stv/gh-w-t-tool/workflows/Mirror/badge.svg?branch=actions&event=schedule
