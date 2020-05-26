@@ -16,7 +16,6 @@ jobs:
   convert_via_pandoc:
     runs-on: ubuntu-18.04
     steps:
-      # TODO: investigate options for running as a local action instead of 3rd party
-      - uses: docker://pandoc/core:2.9
-        with:
-          args: "--help" # gets appended to pandoc command
+      # simple test to check for software already installed in the virtual environment
+      # will return zero if all programs are found
+      - run: which pandoc python pip
