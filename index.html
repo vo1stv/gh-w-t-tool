@@ -4,16 +4,59 @@
   <meta charset="utf-8">
   <meta name="viewport"
      content="width=device-width, initial-scale=1, user-scalable=yes">
-  <title>gh-cweb-tool</title>
-</head>
-<body>
-<script>
-document.body.innerHTML = "gh-cweb-tool";
-</script>
-<noscript>
-<p><!--
--->The W3C consortium has plans to make JavaScript as secure as the browser itself.  Please return to this site when they are successful.<!--
---></p>
+  <title>gh-w-t-tool</title>
+  <script type="text/javascript"> 
+  function $( id )  {
+    
+     if ( document.getElementById )  {
+       
+        return document.getElementById( id );
+       
+     } else if ( document.all )  {
+       
+        return window.document.all[ id ];
+       
+     } else if ( document.layers ) {
+       
+        return window.document.layers[ id ];
+       
+     }
+
+  }
+  </script>
+ </head>
+<body onload="$('noscript').innerHTML='';">
+<div id="content" name="content">
+<noscript id="noscript">
+<h2>Your browser does not support JavaScript</h2>
+
+<p>This site is best viewed with a JavaScript enabled browser, but you may manually navigate from page to page using the forms-based interface.  Please begin by completing the following form:</p>
+<form action="?" method="get">
+  <input type="hidden" id="filename" name="filename" value="tryhtml_form_method_post"/>
+  <input type="radio" id="isFirefox " name="browser" value="isFirefox " />
+  <label for="isFireFox">Firefox</label><br/>
+  <input type="radio" id="isSafari" name="browser" value="isSafari" /> 
+  <label for="isSafari">Safari</label><br/>
+  <input type="radio" id="isIE" name="browser" value="isIE" />
+  <label for="isIE">IE</label><br/>
+  <input type="radio" id="isEdge" name="browser" value="isEdge" />
+  <label for="isEdge">Edge</label><br/>
+  <input type="radio" id="isChrome" name="browser" value="isChrome" />
+  <label for="isChrome">Chrome</label><br/>
+  <input type="radio" id="isChromium" name="browser" value="isChromium" />
+  <label for="isChromium">Chromium</label><br/>
+  <input type="radio" id="isOpera" name="browser" value="isOpera" />
+  <label for="isOpera">Opera</label><br/>
+  <input checked="true" type="radio" id="isOther" name="browser" value="isOther" />
+  <label for="isOther">Other</label><br/>
+  <input type="submit" value="Submit" />
+</form> 
 </noscript>
+gh-w-t-tool
+</div>
+<div width="100%" style="font-size:60%;margin:20px 0;padding:5px;border-style: solid none none;">
+<p align="center">This site is auto-generated from <a href="copyright.html">copyrighted</a> material used under <a href="license.html">license</a></p>
+</div>
+
 </body>
 </html>
