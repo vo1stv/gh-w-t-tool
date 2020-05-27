@@ -19,6 +19,9 @@ jobs:
       - name: aptget
         run: |
           sudo apt-get update
+          sudo apt-get install gcc libpq-dev -y
+          sudo apt-get install python-dev  python-pip -y
+          sudo apt-get install python3-dev python3-pip python3-venv python3-wheel -y
           sudo apt-get install pandoc
                   
       # simple test to check for software already installed in the virtual environment
@@ -33,7 +36,6 @@ jobs:
       - name: Python Modules
         run: |
             pip install wheel
-            python setup.py bdist_wheel  
             pip install pypandoc panflute
 
 #  build:
