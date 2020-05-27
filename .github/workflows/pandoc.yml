@@ -13,9 +13,30 @@ on:
     - cron:  '0 0 * * *'
 
 jobs:
-  convert_via_pandoc:
+  dependent binaries:
     runs-on: ubuntu-18.04
     steps:
+      - name: aptget
+        run: |
+          sudo apt-get update
+          sudo apt-get install pandoc
+                  
       # simple test to check for software already installed in the virtual environment
       # will return zero if all programs are found
-      - run: which pandoc python pip
+      - name: Confirm dependencies
+        run: which curl pandoc python pip
+
+  dependent modules:
+    runs-on: ubuntu-18.04
+    needs: dependent binaries
+    steps:
+      - name: Python Modules
+        run: pip install pypandoc panflute
+
+  build:
+    runs-on: ubuntu-18.04
+    # Ensure test job passes before pushing image.
+    needs: dependent binaries
+    steps:
+      - name: TODO Pandoc
+        run: pandoc --help
