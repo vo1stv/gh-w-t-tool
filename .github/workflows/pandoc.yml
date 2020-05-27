@@ -31,7 +31,10 @@ jobs:
 #    needs: dependent-binaries
 #    steps:
       - name: Python Modules
-        run: pip install wheel pypandoc panflute
+        run: |
+            pip install wheel
+            python setup.py bdist_wheel  
+            pip install pypandoc panflute
 
 #  build:
 #    runs-on: ubuntu-18.04
