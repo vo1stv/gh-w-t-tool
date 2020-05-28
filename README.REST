@@ -9,4 +9,4 @@ The gh-w-t-tool pays homage to Knuth's vison by using his term "weave" to refer 
 
 The simplest weave of a complicated concept is one that renders non-interactive content from a set of tables and forms (check-boxes, radio items, and data entry).  The most complicated tangle is one that interacts with the learner in real-time while trying to work with ANY markup language and any programming language so that the learner can contribute their own adaptations. 
 
-.. _WEB https://doi.org/10.1093/comjnl/27.2.97
+.. _WEB: https://doi.org/10.1093/comjnl/27.2.97
